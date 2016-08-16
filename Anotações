@@ -1,0 +1,19 @@
+# => Objetos Livros
+	livro = Livro.new "TDD", "Mauricio Aniche", "123454", 247, 69.9, :testes
+	tdd = Livro.new "TDD", "Mauricio Aniche", "123454", 247, :testes
+
+# => Objetos DVD
+	windows = DVD.new "Windows 7 for Dummies", 98.9, :sistemas_operacionais
+
+-------------------------------------------------------------------------
+--------------------------- DEFINIÇÕES-----------------------------------
+-------------------------------------------------------------------------
+
+# =>  OBJETO.kind_of? CLASSE
+	Verifica se o OBJETO é do mesmo tipo da CLASSE retornando "true"
+
+# => OBJETO.respond_to? ALGUMA_COISA
+	verifica se o OBJETO possui ALGUMA_COISA, se possuir, retorna "true"
+
+# => duck typing
+	Ruby é uma linguagem que possui tipagem dinâmica, que permite que as classes sejam modeladas e lidem com um estilo de tipo conhecido como Duck Typing que considera o que um objeto pode fazer ou não de qual tipo ele é, quebrando a ligação com a classe do objeto criado. Não precisando conferir de que tipo o objeto é mas se importando com que os métodos pode fazer.
