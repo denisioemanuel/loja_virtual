@@ -1,14 +1,16 @@
 class Midia
-	attr_accessor :valor
-	attr_reader :titulo
+  attr_accessor :valor
+  attr_reader :titulo
 
-	def initialize
-		@desconto = 0.1
-		@valor = 0
-	end
+  def initialize
+    @desconto = 0.1
+  end
 
-	def valor_com_desconto
-		@valor - (@valor * @desconto)
-	end
+  def valor_com_desconto
+    @valor - (@valor * @desconto)
+  end
 
+  def valor_formatado
+    "R$ #{@valor}"
+  end
 end
