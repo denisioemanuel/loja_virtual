@@ -1,0 +1,64 @@
+---------------- UTLIZAR UMA CLASSE NO IRB ---------------
+Pra utilizar uma classe no IRB basta usar o comando abaixo, dependo onde o IRB foi iniciado, por exemplo: noprojeto iniciei o IRB na pasta D:\projetos\ruby\loja_virtual
+  require File.expand_path("caminho ate o arquivo") =>> utilizando o exemplo da  seria o caminho "lib\livro.rb"
+----------------------------------------------------------
+
+-------------- RECARREGAR UMA CLASSE NO IRB --------------
+load File.expand_path("caminho ate o arquivo")
+----------------------------------------------------------
+
+------------- MÉTODOS DE ABRIR UM FILE -------------------
+TIPOS:
+a: Abre o arquivo somente para escrita (começa a escrita o final da última linha existente se o arquivo já existir)
+r: Abre o arquivo somente para leitura
+w: abre o arquivo somente para escrita(sobrescreve todo o conteúdo do arquivo se o mesmo existir)
+w+: abre o arquivo tanto para leitura quanto para escrita (sobreescreve todo o conteúdo do arquivo se o mesmo existir)
+
+----------------------------------------------------------
+
+------------------ NÚMERO SEM REPETIÇÃO-------------------
+Utiliza-se a classe 'SET' como no exemplo:
+  numero_sem_repeticao = Set.new [1, 2, 2, 3, 2, 1]
+  for numero in numero_sem_repeticao do
+    p numero
+  end
+  # => 1
+  # => 2
+  # => 3
+----------------------------------------------------------
+
+
+--------------------- OPERADORES -------------------------
+O operado "||=" faz a mesma coisa que o unless. Quando uma váriavel já estiver com um valor, que não seja nulo, seu valor não muda
+----------------------------------------------------------
+
+-------------------- SERIALIZAÇÃO -------------------------
+Marshall - Retorna um binário
+YAML     - Retorna um texto(compreendido por seres humanos)
+----------------------------------------------------------
+
+-------------------- OBJETOS -------------------------
+livro = Livro.new "TDD", "Mauricio Aniche", "123454", 247,69.9, :testes
+tdd = Livro.new "TDD", "Mauricio Aniche", "123454", 247, :testes
+
+windows = DVD.new "Windows 7 for Dummies", 98.9, :sistemas_operacionais
+
+--- Adicionando livros na blibioteca
+biblioteca.adiciona Livro.new "TDD", "Mauricio Aniche", "123454",247, 69.9, :testes
+biblioteca.adiciona Livro.new "Web Design Responsivo", "Tárcio Zemel","45256", 240, 69.9, :web
+
+----------------------------------------------------------
+Configurações do SUBLIMEE
+
+
+"color_scheme": "Packages/1337 Color Scheme/1337.tmTheme",
+	"gravity_highlight_color_blue": true,
+	"gravity_sidebar_header": true,
+	"gravity_tab_font_small": true,
+	"gravity_tab_height_short": true,
+	"gravity_tab_height_tall": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Gravity.sublime-theme"
