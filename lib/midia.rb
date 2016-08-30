@@ -9,8 +9,5 @@ class Midia
   def valor_com_desconto
     @valor - (@valor * @desconto)
   end
-
-  def valor_formatado
-    "R$ #{@valor}"
-  end
+  
 end
