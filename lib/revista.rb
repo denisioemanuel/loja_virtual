@@ -1,28 +1,32 @@
 # coding: utf-8
 class Revista
+	attr_reader :titulo, :id
+	attr_accessor :valor #permite escrita no atributo "valor"
 
-	@id = 0
-
-	def self.id
-		@id += 1
-	end
-
-	def initialize(titulo)
-		@id = self.class.id
+	def initialize(titulo, valor)
 		@titulo = titulo
+		@valor = valor
+		@id = self.class.next_id #Atribui um id ao objeto revista
 	end
 
-	def titulo
-		@titulo
+	def save
+		File.open("db/revistas/#{@id}.yml", "w") do |file|
+			file.puts serialize
+		end
 	end
 
-	def id
-		@id
+	def self.find(id)
+		YAML.load File.open("db/revistas/#{id}.yml", "r")
 	end
 
-	def titulo_formatado
-		titulo_upcase = @titulo.upcase
-		"Titulo: #{titulo_upcase}"
+	private
+
+	def serialize
+		YAML.dump self
+	end
+
+	def self.next_id
+		Dir.glob("db/revistas/*.yml").size + 1
 	end
 
 end
