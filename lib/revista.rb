@@ -16,7 +16,10 @@ class Revista
 	end
 
 	def self.find(id)
-		YAML.load File.open("db/revistas/#{id}.yml", "r")
+		raise DocumentNotFound, "Arquivo db/revistas/#{id} não encontrado.", caller
+		unless File.exist?("db/revistas/#{id}.yml")
+			YAML.load File.open("db/revistas/#{id}.yml", "r")	
+		end
 	end
 
 	private
