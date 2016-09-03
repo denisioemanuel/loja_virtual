@@ -1,3 +1,4 @@
+load File.expand_path('lib/document_not_found.rb')
 load File.expand_path('lib/midia.rb')
 load File.expand_path('lib/formatador_moeda.rb')
 load File.expand_path('lib/livro.rb')
