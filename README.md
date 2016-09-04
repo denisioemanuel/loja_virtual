@@ -1,3 +1,3 @@
 # Projeto lojav_irtual
 
-Este é um projeto do livro da casa do código sobre Ruby.
+Estudando e primorando meus conhecimentos em Ruby com o livro da casa do código Ruby aprenda a programar na linguagem mais divertida

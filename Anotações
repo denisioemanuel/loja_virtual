@@ -5,6 +5,12 @@
 # => Objetos DVD
 	windows = DVD.new "Windows 7 for Dummies", 98.9, :sistemas_operacionais
 
+# => Require
+	require File.expand_path("lib/require")
+
+# => Load
+	load File.expand_path("lib/load.rb")
+
 -------------------------------------------------------------------------
 --------------------------- DEFINIÇÕES-----------------------------------
 -------------------------------------------------------------------------
